@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:state_management_getx_flutter/pages/SnackBarPage.dart';
+import 'package:state_management_getx_flutter/pages/DialogPage.dart';
+// import 'package:state_management_getx_flutter/pages/SnackBarPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,9 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: Snackbarpage(),
+      home: DialogPage(),
     );
   }
 }
-
-
