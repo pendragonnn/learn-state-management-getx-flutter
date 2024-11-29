@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:state_management_getx_flutter/pages/BottomSheetPage.dart';
+// import 'package:state_management_getx_flutter/pages/BottomSheetPage.dart';
+// import 'package:state_management_getx_flutter/pages/ReactiveStateManagementPage.dart';
+import 'package:state_management_getx_flutter/pages/SimpleStateManagementPage.dart';
 // import 'package:state_management_getx_flutter/pages/DialogPage.dart';
 // import 'package:state_management_getx_flutter/pages/SnackBarPage.dart';
 
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: BottomSheetPage(),
+      home: SimpleStateManagementPage(),
     );
   }
 }
