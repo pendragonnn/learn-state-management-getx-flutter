@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:state_management_getx_flutter/bindings/CounterBindings.dart';
 import 'package:state_management_getx_flutter/controllers/BindingsBuilderController.dart';
 import 'package:state_management_getx_flutter/controllers/DependencyManagerController.dart';
-import 'package:state_management_getx_flutter/controllers/MainController.dart';
-import 'package:state_management_getx_flutter/controllers/ReactiveVariablesController.dart';
+// import 'package:state_management_getx_flutter/controllers/MainController.dart';
+// import 'package:state_management_getx_flutter/controllers/ReactiveVariablesController.dart';
 import 'package:state_management_getx_flutter/pages/BindingsBuilderPage.dart';
 import 'package:state_management_getx_flutter/pages/CounterPage.dart';
 // import 'package:state_management_getx_flutter/pages/DependencyManagerPage.dart';
@@ -82,18 +83,21 @@ class MyApp extends StatelessWidget {
           // binding: BindingsBuilder.put(
           //   () => BindingsBuilderController(),
           // ),
-          // jika menggunakan banyak binding sekaligus
-          bindings: [
-            BindingsBuilder.put(
-              () => BindingsBuilderController(),
-            ),
-            // BindingsBuilder.put(
-            //   () => MainController(),
-            // ),
-            // BindingsBuilder.put(
-            //   () => ReactiveVariablesController(),
-            // ),
-          ],
+          // jika menggunakan banyak binding sekaligus tanpa class bindings
+          // bindings: [
+          //   BindingsBuilder.put(
+          //     () => BindingsBuilderController(),
+          //   ),
+          //   // BindingsBuilder.put(
+          //   //   () => MainController(),
+          //   // ),
+          //   // BindingsBuilder.put(
+          //   //   () => ReactiveVariablesController(),
+          //   // ),
+          // ],
+
+          // jika menggunakan banyak binding sekaligus dengan class bindings
+          binding: CounterBindings(),
         ),
       ],
     );
