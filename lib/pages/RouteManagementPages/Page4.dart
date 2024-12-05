@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:state_management_getx_flutter/pages/RouteManagementPages/Page5.dart';
+// import 'package:state_management_getx_flutter/pages/RouteManagementPages/Page5.dart';
 
 class Page4 extends StatelessWidget {
   const Page4({super.key});
@@ -26,13 +26,21 @@ class Page4 extends StatelessWidget {
             Text("Page 4"),
             ElevatedButton(
               onPressed: () {
-                // back tanpa get x
-                // Navigator.pop(context);
+                // pindah halaman tanpa get x
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => Page5(),
+                //   ),
+                // );
 
-                // back dengan get x
-                Get.to(
-                  Page5(),
-                );
+                // pindah halaman dengan get x
+                // Get.to(
+                //   "/page5",
+                // );
+
+                // pindah halaman dengan route named
+                Get.toNamed("/page5");
               },
               child: Text(
                 "Next >>",

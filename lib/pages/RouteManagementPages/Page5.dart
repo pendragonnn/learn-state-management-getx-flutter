@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:state_management_getx_flutter/pages/RouteManagementPage.dart';
-import 'package:state_management_getx_flutter/pages/RouteManagementPages/Page1.dart';
-import 'package:state_management_getx_flutter/pages/RouteManagementPages/Page2.dart';
-import 'package:state_management_getx_flutter/pages/RouteManagementPages/Page3.dart';
+// import 'package:state_management_getx_flutter/pages/RouteManagementPage.dart';
+// import 'package:state_management_getx_flutter/pages/RouteManagementPages/Page1.dart';
+// import 'package:state_management_getx_flutter/pages/RouteManagementPages/Page2.dart';
+// import 'package:state_management_getx_flutter/pages/RouteManagementPages/Page3.dart';
 
 class Page5 extends StatelessWidget {
   const Page5({super.key});
@@ -29,14 +29,21 @@ class Page5 extends StatelessWidget {
             Text("Page 5"),
             ElevatedButton(
               onPressed: () {
-                // back tanpa get x
-                // Navigator.pop(context);
-
-                // back dengan get x
-                Get.back();
-
                 // menghapus semua layer sampai ke halaman tujuan dan langsung kembali ke halaman tujuan
-                Get.offAll(RouteManagementPage());
+                // Navigator.pushReplacement(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => RouteManagementPage(),
+                //   ),
+                // );
+
+                // menghapus semua layer sampai ke halaman tujuan dan langsung kembali ke halaman tujuan dengan get x
+                // Get.offAll(
+                //   RouteManagementPage(),
+                // );
+
+                // menghapus semua layer sampai ke halaman tujuan dan langsung kembali ke halaman tujuan dengan route named
+                Get.offAllNamed("/home");
               },
               child: Text(
                 "Back to home >>",
@@ -44,16 +51,21 @@ class Page5 extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                // back tanpa get x
-                // Navigator.pop(context);
-
-                // back dengan get x
-                Get.back();
-
                 // menghapus semua layer sampai ke halaman tujuan dan langsung kembali ke halaman tujuan
-                Get.offAll(
-                  Page2(),
-                );
+                // Navigator.pushReplacement(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => Page2(),
+                //   ),
+                // );
+
+                // menghapus semua layer sampai ke halaman tujuan dan langsung kembali ke halaman tujuan dengan get x
+                // Get.offAll(
+                //   page2(),
+                // );
+
+                // menghapus semua layer sampai ke halaman tujuan dan langsung kembali ke halaman tujuan dengan route named
+                Get.offAllNamed("/page2");
               },
               child: Text(
                 "Back to Page 2 >>",
@@ -61,14 +73,21 @@ class Page5 extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                // back tanpa get x
-                // Navigator.pop(context);
-
-                // back dengan get x
-                Get.back();
-
                 // menghapus semua layer sampai ke halaman tujuan dan langsung kembali ke halaman tujuan
-                Get.offAll(Page3());
+                // Navigator.pushReplacement(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => Page3(),
+                //   ),
+                // );
+
+                // menghapus semua layer sampai ke halaman tujuan dan langsung kembali ke halaman tujuan dengan get x
+                // Get.offAll(
+                //   page3(),
+                // );
+
+                // menghapus semua layer sampai ke halaman tujuan dan langsung kembali ke halaman tujuan dengan route named
+                Get.offAllNamed("/page3");
               },
               child: Text(
                 "Back to Page 3 >>",
