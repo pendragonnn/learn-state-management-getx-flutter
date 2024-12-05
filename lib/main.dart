@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:state_management_getx_flutter/controllers/DependencyManagerController.dart';
-import 'package:state_management_getx_flutter/pages/DependencyManagerPage.dart';
+// import 'package:state_management_getx_flutter/pages/DependencyManagerPage.dart';
+import 'package:state_management_getx_flutter/pages/RouteManagementPage.dart';
 // import 'package:state_management_getx_flutter/pages/RxVariablesPage.dart';
 // import 'package:state_management_getx_flutter/pages/WorkersPage.dart';
 // import 'package:state_management_getx_flutter/pages/BottomSheetPage.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: DependencyManagerPage(),
+      home: RouteManagementPage(),
     );
   }
 }
