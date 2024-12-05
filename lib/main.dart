@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:state_management_getx_flutter/controllers/BindingsBuilderController.dart';
 import 'package:state_management_getx_flutter/controllers/DependencyManagerController.dart';
+import 'package:state_management_getx_flutter/controllers/MainController.dart';
+import 'package:state_management_getx_flutter/controllers/ReactiveVariablesController.dart';
+import 'package:state_management_getx_flutter/pages/BindingsBuilderPage.dart';
+import 'package:state_management_getx_flutter/pages/CounterPage.dart';
 // import 'package:state_management_getx_flutter/pages/DependencyManagerPage.dart';
 import 'package:state_management_getx_flutter/pages/RouteManagementPage.dart';
 import 'package:state_management_getx_flutter/pages/RouteManagementPages/Page1.dart';
@@ -33,7 +38,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: RouteManagementPage(),
+      home: BindingsBuilderPage(),
 
       // route named tanpa get x
       // routes: {
@@ -70,6 +75,25 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: "/page5",
           page: () => Page5(),
+        ),
+        GetPage(
+          name: "/counterPage",
+          page: () => CounterPage(),
+          // binding: BindingsBuilder.put(
+          //   () => BindingsBuilderController(),
+          // ),
+          // jika menggunakan banyak binding sekaligus
+          bindings: [
+            BindingsBuilder.put(
+              () => BindingsBuilderController(),
+            ),
+            // BindingsBuilder.put(
+            //   () => MainController(),
+            // ),
+            // BindingsBuilder.put(
+            //   () => ReactiveVariablesController(),
+            // ),
+          ],
         ),
       ],
     );
